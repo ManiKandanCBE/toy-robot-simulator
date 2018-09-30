@@ -38,7 +38,7 @@ ToyRobotUtil.prototype.parseData = function(fileData, cb) {
     cb(new RangeError('Must pass commands to the robot'));
     return false;
   }
-	console.log('FileDate : ' + typeof(fileData));
+
   var parsedCommands = fileData
     .split('\r\n')
     .map(function(command) {

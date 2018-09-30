@@ -2,14 +2,15 @@
   "name": "toy-robot-simulator",
   "version": "1.0.0",
   "description": "",
-  "main": "toyRobot.js",
+  "main": "./src/simulator.js",
   "dependencies": {
-    "chai": "^4.2.0"
+	"chai": "^4.2.0"
   },
   "devDependencies": {
-    "mocha": "^5.2.0"
+	"mocha": "^5.2.0"
   },
   "scripts": {
+    "start": "node ./app.js",
     "test": "mocha"
   },
   "author": "",

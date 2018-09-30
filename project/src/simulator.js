@@ -1,4 +1,5 @@
 var ToyRobotUtil = require('./toyRobotUtil');
+var ToyRobot = require('./toyRobot');
 
 /**
  * Application module
@@ -6,6 +7,7 @@ var ToyRobotUtil = require('./toyRobotUtil');
 var simulator = {};
 
 var toyRobotUtil = new ToyRobotUtil();
+var toyRobot = new ToyRobot();
 
 /**
  * Read and parse file name
@@ -24,11 +26,14 @@ simulator.readAndParseFile = function(fileName, cb) {
         cb(err);
         return false;
       }
-	  console.log("commandList : " + JSON.stringify(commandList));
-
-      //cb(null, commandList);
+	  
+	  cb(null, commandList);
     })
   });
+};
+
+simulator.runCommands = function(commandList) {
+	return toyRobot.runCommands(commandList);
 };
 
 module.exports = simulator;
