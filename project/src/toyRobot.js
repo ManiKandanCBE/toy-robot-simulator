@@ -79,12 +79,12 @@ ToyRobot.prototype.move = function() {
 
   switch (this.direction) {
     case 'north':
-      if (++y < this.tableSize.y) {
+      if (++y <= this.tableSize.y) {
         this.position = {x: x, y: y}
       }
       break;
     case 'east':
-      if (++x < this.tableSize.x) {
+      if (++x <= this.tableSize.x) {
         this.position = {x: x, y: y}
       }
       break;
